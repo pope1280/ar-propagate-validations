@@ -1,9 +1,5 @@
 <h3> Create a New Event </h3>
 
-<form id='new_event' action='/events/create' method='post'>
-  <input type='text' name='event[organizer_name]' placeholder='Organizer Name'>
-  <input type='text' name='event[orgaizer_email]' placeholder='Organizer Email'>
-  <input type='text' name='event[title]' placeholder='Event Title'>
-  <input type='date' name='event[date]'>
-  <input type='submit' value='Create Event'>
-</form>  
+<%= erb input_errors? %>
+
+

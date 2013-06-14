@@ -1,0 +1,7 @@
+<form id='new_event' action='/events/create' method='post'>
+  <input type='text' name='event[organizer_name]' placeholder='Organizer Name'>
+  <input type='text' name='event[organizer_email]' placeholder='Organizer Email'>
+  <input type='text' name='event[title]' placeholder='Event Title'>
+  <input type='date' name='event[date]' value="<%=Date.today%>">
+  <input type='submit' value='Create Event'>
+</form>  

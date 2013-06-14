@@ -13,5 +13,12 @@ get '/events/new' do
 end
 
 post '/events/create' do
-  p params
+  event = Event.create(params["event"])
+
+  if event.valid?
+    redirect '/'      
+  else
+    @errors = event.errors.full_messages
+    erb :new_event
+  end  
 end

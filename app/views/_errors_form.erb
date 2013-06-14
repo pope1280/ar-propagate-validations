@@ -1,0 +1,11 @@
+<form id='new_event' action='/events/create' method='post'>
+  <input type='text' name='event[organizer_name]' value='<%=@params["organizer_name"]%>' placeholder='Organizer Name'>
+  <input type='text' name='event[organizer_email]' value='<%=@params["organizer_email"]%>' placeholder='Organizer Email'>
+  <input type='text' name='event[title]' value='<%=@params["title"]%>' placeholder='Event Title'>
+  <input type='date' name='event[date]' value="<%=@params["date"]%>">
+  <input type='submit' value='Create Event'>
+</form>  
+
+<% @errors.each do |error| %>
+ <li> <%= error %> </li>
+<% end %>
