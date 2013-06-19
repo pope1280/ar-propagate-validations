@@ -18,6 +18,7 @@ post '/events/create' do
   if event.valid?
     redirect '/'      
   else
+    @params = params["event"]
     @errors = event.errors.full_messages
     erb :new_event
   end  
